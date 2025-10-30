@@ -17,7 +17,7 @@
         <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
       </q-list>
       <q-separator spaced />
-      <q-lists>
+      <q-list>
         <q-item-label header>App</q-item-label>
 
         <q-item clickable v-ripple to="/PopisNovihKnjiga">
@@ -39,7 +39,7 @@
             <q-item-label caption>Pretrazi sve knjige</q-item-label>
           </q-item-section>
         </q-item>
-      </q-lists>
+      </q-list>
     </q-drawer>
 
     <q-page-container>
