@@ -17,10 +17,15 @@
         <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
       </q-list>
       <q-separator spaced />
-      <q-lists>
+      <q-list>
         <q-item-label header>App</q-item-label>
 
-        <q-item clickable v-ripple to="/PopisNovihKnjiga">
+        <q-item clickable v-ripple to="/" exact>
+          <q-item-section avatar><q-icon name="home" /></q-item-section>
+            <q-item-section><q-item-label>Naslovnica</q-item-label></q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/popisNovihKnjiga" exact>
           <q-item-section avatar>
             <q-icon name="menu_book" />
           </q-item-section>
@@ -30,7 +35,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/popisKnjiga">
+        <q-item clickable v-ripple to="/popisKnjiga" exact>
           <q-item-section avatar>
             <q-icon name="library_books" />
           </q-item-section>
@@ -39,7 +44,15 @@
             <q-item-label caption>Pretrazi sve knjige</q-item-label>
           </q-item-section>
         </q-item>
-      </q-lists>
+
+        <q-item clickable v-ripple tag="a" href="https://www.veleri.hr" target="_blank" rel="noopener">
+          <q-item-section avatar><q-icon name="school" /></q-item-section>
+          <q-item-section>
+            <q-item-label>Veleučilište u Rijeci</q-item-label>
+            <q-item-label caption>veleri.hr</q-item-label>
+          </q-item-section>
+        </q-item>
+      </q-list>
     </q-drawer>
 
     <q-page-container>
